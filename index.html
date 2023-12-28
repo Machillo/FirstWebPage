@@ -32,7 +32,7 @@
       <div class="home-content">
         <div class="div-title">
           <h1>Bienvenido a <span> appfinanzas.</span></h1>
-          <h3>Organiza tus finanzas de la manera más facil y efectiva.</h3>
+          <h3>Organiza tus finanzas de la manera más fácil y efectiva.</h3>
         </div>
       </div>
       <div class="div-paragraph">
@@ -42,22 +42,65 @@
         </p>
       </div>
     </section>
-    <section>
-      <div class="accounts">
-        <h2>Cuentas</h2>
-        <h3>Agregar Nueva Cuenta</h3>
+    <section class="selection">
+      <h2>Cuentas</h2>
+      <h3>Selecciona una opcion:</h3>
+      <div id="balance">Balance: ₡</div>
 
-        <form action="" id="addAccountForm">
-          <label for="accountName">Nombre de la cuenta: </label>
-          <input type="text" id="accountName" name="accountName" required />
-
-          <label for="accountType">Tipo de cuenta: </label>
-          <select name="accountType" id="accountType" required>
-            <option value="savings">Ahorros</option>
-            <option value="checkings">Corriente</option>
-          </select>
-        </form>
-      </div>
+      <select id="optionsSelect">
+        <option value="card">Tarjeta</option>
+        <option value="cash">Efectivo</option>
+        <option value="addAccount">Agregar Cuenta</option>
+      </select>
     </section>
+    <section id="options-cards" class="options">
+      <h4>Recargar</h4>
+      <form id="rechargeForm">
+        <label for="rechargeDetail">Detalle: </label>
+        <input type="text" id="rechargeDetail" name="rechargeDetail" required />
+
+        <label for="rechargeAmount">Monto: </label>
+        <input
+          type="number"
+          id="rechargeAmount"
+          name="rechargeAmount"
+          required
+        />
+
+        <label for="rechargeCategory">Categoria: </label>
+        <select name="rechargeCategory" id="rechargeCategory">
+          <option value="salary">Salario</option>
+          <option value="other">Otro</option>
+        </select>
+        <button type="button" onclick="performRecharge()">Recargar</button>
+      </form>
+    </section>
+    <section id="options-cash" class="options">
+      <h4>Retirar</h4>
+      <form id="withdrawForm">
+        <label for="withdrawDetail">Detalle: </label>
+        <input type="text" name="withdrawAmount" id="withdrawAmount" />
+
+        <label for="withdrawCategory">Categoria: </label>
+        <select name="withdrawCategory" id="withdrawCategory">
+          <option value="home">Casa</option>
+          <option value="debts">Deudas</option>
+          <option value="createNew">Crear Nueva</option>
+        </select>
+        <div id="createNewCategory" style="display: none">
+          <label for="createNewCategory">Nueva Categoria:</label>
+          <input type="text" name="newCategory" id="newCategory" />
+        </div>
+        <button type="button" onclick="performWithdraw()">Retirar</button>
+      </form>
+    </section>
+    <section id="options-addAccount" class="options">
+      <form id="addAccountForm">
+        <label for="accountName">Nombre de la cuenta: </label>
+        <input type="text" id="accountName" name="accountName" required />
+        <button type="submit">Agregar</button>
+      </form>
+    </section>
+    <script src="app.js" defer></script>
   </body>
 </html>
