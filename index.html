@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App Finanzas</title>
+    <link rel="stylesheet" href="style.css" />
+    <!--boxicon link-->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn">
+          <i class="bx bx-menu"></i>
+        </label>
+        <label class="logo">appfinanzas.</label>
+        <ul>
+          <li><a href="#" class="active">Inicio</a></li>
+          <li><a href="#">Cuentas</a></li>
+          <li><a href="#">Categorias</a></li>
+          <li><a href="#">Transacciones</a></li>
+          <li><a href="#">Resumen</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section>
+      <div class="home-content">
+        <div class="div-title">
+          <h1>Bienvenido a <span> appfinanzas.</span></h1>
+          <h3>Organiza tus finanzas de la manera más facil y efectiva.</h3>
+        </div>
+      </div>
+      <div class="div-paragraph">
+        <p class="movement">
+          Controla tus sueños, no dejes que tus finanzas te controlen. Descubre
+          appfinanzas y da el primer paso hacia tu libertad financiera.
+        </p>
+      </div>
+    </section>
+    <section>
+      <div class="accounts">
+        <h2>Cuentas</h2>
+        <h3>Agregar Nueva Cuenta</h3>
+
+        <form action="" id="addAccountForm">
+          <label for="accountName">Nombre de la cuenta: </label>
+          <input type="text" id="accountName" name="accountName" required />
+
+          <label for="accountType">Tipo de cuenta: </label>
+          <select name="accountType" id="accountType" required>
+            <option value="savings">Ahorros</option>
+            <option value="checkings">Corriente</option>
+          </select>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
