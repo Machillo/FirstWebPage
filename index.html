@@ -12,94 +12,42 @@
     />
   </head>
   <body>
-    <header class="header">
-      <nav class="navbar">
-        <input type="checkbox" id="check" />
-        <label for="check" class="checkbtn">
-          <i class="bx bx-menu"></i>
-        </label>
-        <label class="logo">appfinanzas.</label>
-        <ul>
-          <li><a href="#" class="active">Inicio</a></li>
-          <li><a href="#">Cuentas</a></li>
-          <li><a href="#">Categorias</a></li>
-          <li><a href="#">Transacciones</a></li>
-          <li><a href="#">Resumen</a></li>
-        </ul>
-      </nav>
-    </header>
-    <section>
-      <div class="home-content">
-        <div class="div-title">
-          <h1>Bienvenido a <span> appfinanzas.</span></h1>
-          <h3>Organiza tus finanzas de la manera más fácil y efectiva.</h3>
+    <section id="home">
+      <div class="content">
+        <header class="header">
+          <nav class="navbar">
+            <input type="checkbox" id="check" />
+            <label for="check" class="checkbtn">
+              <i class="bx bx-menu"></i>
+            </label>
+            <label class="logo">appfinanzas.</label>
+            <ul>
+              <li><a href="#home" class="active">Inicio</a></li>
+              <li><a href="#accounts">Cuentas</a></li>
+              <li><a href="#categories">Categorias</a></li>
+              <li><a href="#transactions">Transacciones</a></li>
+              <li><a href="#summary">Resumen</a></li>
+            </ul>
+          </nav>
+        </header>
+      </div>
+    </section>
+    <section id="accounts">
+      <div class="container-photo">
+        <img src="/img/container-photo.jpg" alt="" />
+      </div>
+      <div class="accounts">
+        <div id="title">
+          <h2>Bienvenido a <span>appfinanzas.</span></h2>
+          <p>Organiza tus finanzas de la manera más fácil y efectiva.</p>
         </div>
       </div>
-      <div class="div-paragraph">
-        <p class="movement">
-          Controla tus sueños, no dejes que tus finanzas te controlen. Descubre
+      <div id="paragraph">
+        <p id="movement">
+          Contrtola tus sueños, no dejes que tus finanzas te controlen. Descubre
           appfinanzas y da el primer paso hacia tu libertad financiera.
         </p>
       </div>
-    </section>
-    <section class="selection">
-      <h2>Cuentas</h2>
-      <h3>Selecciona una opcion:</h3>
-      <div id="balance">Balance: ₡</div>
-
-      <select id="optionsSelect">
-        <option value="card">Tarjeta</option>
-        <option value="cash">Efectivo</option>
-        <option value="addAccount">Agregar Cuenta</option>
-      </select>
-    </section>
-    <section id="options-cards" class="options">
-      <h4>Recargar</h4>
-      <form id="rechargeForm">
-        <label for="rechargeDetail">Detalle: </label>
-        <input type="text" id="rechargeDetail" name="rechargeDetail" required />
-
-        <label for="rechargeAmount">Monto: </label>
-        <input
-          type="number"
-          id="rechargeAmount"
-          name="rechargeAmount"
-          required
-        />
-
-        <label for="rechargeCategory">Categoria: </label>
-        <select name="rechargeCategory" id="rechargeCategory">
-          <option value="salary">Salario</option>
-          <option value="other">Otro</option>
-        </select>
-        <button type="button" onclick="performRecharge()">Recargar</button>
-      </form>
-    </section>
-    <section id="options-cash" class="options">
-      <h4>Retirar</h4>
-      <form id="withdrawForm">
-        <label for="withdrawDetail">Detalle: </label>
-        <input type="text" name="withdrawAmount" id="withdrawAmount" />
-
-        <label for="withdrawCategory">Categoria: </label>
-        <select name="withdrawCategory" id="withdrawCategory">
-          <option value="home">Casa</option>
-          <option value="debts">Deudas</option>
-          <option value="createNew">Crear Nueva</option>
-        </select>
-        <div id="createNewCategory" style="display: none">
-          <label for="createNewCategory">Nueva Categoria:</label>
-          <input type="text" name="newCategory" id="newCategory" />
-        </div>
-        <button type="button" onclick="performWithdraw()">Retirar</button>
-      </form>
-    </section>
-    <section id="options-addAccount" class="options">
-      <form id="addAccountForm">
-        <label for="accountName">Nombre de la cuenta: </label>
-        <input type="text" id="accountName" name="accountName" required />
-        <button type="submit">Agregar</button>
-      </form>
     </section>
     <script src="app.js" defer></script>
   </body>

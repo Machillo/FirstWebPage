@@ -6,6 +6,7 @@
     --shadow: 0.5px 10px 5px rgba(0, 0, 0, .3);
     --navColor: linear-gradient(to right, rgba(0, 177, 0, 1) 5%, rgba(0, 46, 28, 1));
     --homeColor: linear-gradient(to right, rgb(41, 41, 41, .5) 5%, rgb(27, 27, 27, .6));
+    --accountColor: linear-gradient(to right, rgb(25, 25, 25, 1) 5%, rgb(4, 4, 4, 1));
 }
 
 * {
@@ -13,6 +14,10 @@
     margin: 0;
     text-decoration: none;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -88,60 +93,15 @@ a.active, a:hover {
     display: none;
 }
 
+
 /*HomeSection*/
 
-.home-content {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: left;
-    margin: 1px;
-    padding: 200px;
-    background: var(--homeColor);
-}
-
-.div-title h1 {
-    color: var(--white);
-    margin-bottom: 10px;
-    font-size: 50px;
-    text-transform: uppercase;
-}
-
-span {
-    color: #00b100;
-    text-transform: none;
-}
 
 
-.div-paragraph {
-    width: 80%;
-}
+/*Account style*/
 
-.div-paragraph p {
-    color: var(--white);
-    background-color: #002e1c;
-    padding: 20px;
-    margin: 0;
-    overflow: hidden;
-    white-space: nowrap;
-    animation: scrolling 25s linear infinite;
-}
 
-.movement {
-    color: var(--white);
-    overflow: hidden;
-    white-space: nowrap;
-    animation: scrolling 25s linear infinite;
-}
 
-@keyframes scrolling {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
 
 
 /*responsive code*/
